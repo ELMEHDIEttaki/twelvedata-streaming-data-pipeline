@@ -1,0 +1,34 @@
+1 - List the data types of incoming events:
+    event              object
+    status             object
+    success            object
+    fails              object
+    symbol             object
+    currency_base      object
+    currency_quote     object
+    exchange           object
+    type               object
+    timestamp         float64
+    price             float64
+    bid               float64
+    ask               float64
+    day_volume        float64
+
+2 - What we need : 
+    We need now to extract the most importants features include : 
+    "symbol",
+    "currency_base",
+    "currency_quote",
+    "type",
+    "timestamp",
+    "price",
+    "day_volume"
+
+    There are the most needed for now ! 
+
+3 - What Next ?
+    For now we should to convert this incoming data events from JSON to a uniform format, for our case
+    we work with AVRO, so we serialize the incoming data and by next store theme into AVRO Schema.
+
+==> So, we will create a avro schema include all features for our case.
+==> Let"s install AVRO on our developement environnement.
