@@ -36,7 +36,7 @@ def publish_to_kafka(df, topic):
 
 def main():
     # Path to the CSV file
-    csv_file = "/media/elmehdi/SQUAD/Processed_UNSW-NB15.csv"  # Update with the correct path to your CSV file
+    csv_file = ""  # Update with the correct path to your CSV file
 
     # Kafka topic to publish messages to
     kafka_topic = "market"
