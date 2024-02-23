@@ -9,6 +9,12 @@ import json
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 historical_messages = []
+symbols = [
+    'BTC/USD',
+    'ETH/BTC', 
+    'USD', 
+    'AAPL'
+]
 
 def on_event(e):
     print(e)
@@ -20,8 +26,8 @@ kafka_topic = "market"
 
 API_KEY = ""
 td = TDClient(API_KEY)
-ws = td.websocket(symbols="BTC/USD", on_event=on_event)
-ws.subscribe(['ETH/BTC', 'USD', 'AAPL'])
+ws = td.websocket(symbols=symbols, on_event=on_event)
+ws.subscribe(symbols)
 ws.connect()
 
 
